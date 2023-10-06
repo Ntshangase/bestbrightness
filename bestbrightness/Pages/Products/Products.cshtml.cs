@@ -22,7 +22,7 @@ namespace bestbrightness.Pages.Products
                     String sql = "SELECT * FROM Products";
                     using (SqlCommand command = new SqlCommand(sql, connection))
                     {
-                        using (SqlDataReader reader = new command.ExecutableReader())
+                        using (SqlDataReader reader = command.ExecuteReader())
                         {
                             while (reader.Read())
                             {
@@ -33,11 +33,15 @@ namespace bestbrightness.Pages.Products
                                 productInfo.price = reader.GetString(3);
                                 productInfo.review = reader.GetString(4);
                                 productInfo.created_at = reader.GetString(5).ToString();
+
+                                listProducts.Add(productInfo);
                             }
                         }
                     }
                 }
-            }catch (Exception ex) { }
+            }catch (Exception ex) { 
+                Console.WriteLine("Exception: " + ex.ToString());
+            }
         }
     }
 
