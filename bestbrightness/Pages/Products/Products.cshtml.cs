@@ -32,7 +32,7 @@ namespace bestbrightness.Pages.Products
                                 productInfo.category = reader.GetString(2);
                                 productInfo.price = reader.GetString(3);
                                 productInfo.review = reader.GetString(4);
-                                productInfo.created_at = reader.GetString(5).ToString();
+                                productInfo.created_at = reader.GetDateTime(5).ToString();
 
                                 listProducts.Add(productInfo);
                             }
