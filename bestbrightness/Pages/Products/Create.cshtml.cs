@@ -19,8 +19,8 @@ namespace bestbrightness.Pages.Products
             productInfo.price = Request.Form["price"];
             productInfo.review = Request.Form["review"];
 
-            if(productInfo.item.Length == 0 || productInfo.category.Length == 0 || 
-                productInfo.price.Length == 0 || productInfo.review.Length == 0) 
+            if (productInfo.item.Length == 0 || productInfo.category.Length == 0 ||
+                productInfo.price.Length == 0 || productInfo.review.Length == 0)
             {
                 errorMessage = "All Fields Required";
                 return;
