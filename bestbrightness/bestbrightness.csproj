@@ -7,7 +7,23 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Content Remove="Pages\Products\Edit.cshtml" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="System.Data.SqlClient" Version="4.8.5" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <UpToDateCheckInput Remove="Pages\Products\Edit.cshtml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <_ContentIncludedByDefault Remove="Pages\Products\Edit.cshtml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="Pages\Products\Edit.cshtml" />
   </ItemGroup>
 
 </Project>
