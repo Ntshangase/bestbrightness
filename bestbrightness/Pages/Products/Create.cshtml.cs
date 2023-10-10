@@ -63,7 +63,7 @@ namespace bestbrightness.Pages.Products
             successMessage = "New Product Added Successfuly";
 
             //redirect user if succesfully added product
-            Response.Redirect("Products/Products");
+            Response.Redirect("/Products/Products");
         }
     }
 }
