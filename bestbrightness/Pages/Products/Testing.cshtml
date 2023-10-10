@@ -11,7 +11,7 @@
     @foreach (var product in Model.listProducts)
     {
         <div class="product-card">
-            @* <img src="product-images/@product.ImageFileName" alt="@product.Item" /> *@
+            <img src="./Images/image@(product.id).jpg" alt="@product.item" />
             <h3>@product.item</h3>
             <p>Category: @product.category</p>
             <p>Price: R @product.price</p>
