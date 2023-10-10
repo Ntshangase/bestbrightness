@@ -9,6 +9,8 @@ namespace bestbrightness.Pages.Products
     public class TestingModel : PageModel
     {
         public List<ProductInfo> listProducts { get; set; }
+        // Cart counter property
+        public int CartCounter { get; set; } = 0;
 
         public void OnGet()
         {

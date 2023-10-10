@@ -17,7 +17,20 @@
             <p>Price: R @product.price</p>
             <p>Review: @product.review</p>
             <p>Created At: @product.created_at</p>
-            <button>Add to Cart</button>
+            <button class="add-to-cart-button" onclick="incrementCartCounter()">Add to Cart</button>
+
         </div>
     }
 </div>
+
+<div id="cart-counter">You have @Model.CartCounter items on your Cart</div>
+
+<script>
+    function incrementCartCounter() {
+        // Increment the cart counter
+        @Model.CartCounter++;
+
+        // Display the updated cart counter
+        document.getElementById("cart-counter").textContent = @Model.CartCounter;
+    }
+</script>
