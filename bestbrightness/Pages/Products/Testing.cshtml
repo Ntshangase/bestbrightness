@@ -25,3 +25,59 @@
 </div>
 
 <div id="cart-counter">You have @Model.CartCounter items on your Cart</div>
+
+<style>
+    /* Style for the "Add to Cart" button */
+    button[name="addItemToCart"] {
+        background-color: #007bff; /* Background color */
+        color: #fff; /* Text color */
+        border: none; /* Remove the border */
+        border-radius: 5px; /* Rounded corners */
+        padding: 10px 20px; /* Padding around the text */
+        cursor: pointer; /* Cursor style on hover */
+    }
+
+        /* Style for the button on hover */
+        button[name="addItemToCart"]:hover {
+            background-color: #0056b3; /* Darker background color on hover */
+        }
+
+    /* Style for the product grid */
+    .product-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Responsive grid */
+        gap: 20px;
+        justify-items: center; /* Center items horizontally */
+    }
+
+    /* Style for each product card */
+    .product-card {
+        background-color: #fff;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        padding: 20px;
+        text-align: center;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+    }
+
+        .product-card img {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 10px;
+        }
+
+        /* Style for the "Add to Cart" button */
+        .product-card button[name="addItemToCart"] {
+            background-color: #007bff; /* Background color */
+            color: #fff; /* Text color */
+            border: none; /* Remove the border */
+            border-radius: 5px; /* Rounded corners */
+            padding: 10px 20px; /* Padding around the text */
+            cursor: pointer; /* Cursor style on hover */
+        }
+
+            /* Style for the button on hover */
+            .product-card button[name="addItemToCart"]:hover {
+                background-color: #0056b3; /* Darker background color on hover */
+            }
+</style>
