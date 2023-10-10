@@ -77,6 +77,8 @@ namespace bestbrightness.Pages.Products
                         command.Parameters.AddWithValue("@category", productInfo.category);
                         command.Parameters.AddWithValue("@price", productInfo.price);
                         command.Parameters.AddWithValue("@review", productInfo.review);
+                        command.Parameters.AddWithValue("@id", productInfo.id);
+
 
                         command.ExecuteNonQuery();
                     }
