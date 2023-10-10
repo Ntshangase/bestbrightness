@@ -21,7 +21,7 @@ namespace bestbrightness.Pages.Products
                 using (SqlConnection connection = new SqlConnection(connectionString))
                 {
                     connection.Open();
-                    String sql = "SELECT * FROM Products Where id=@id";
+                    String sql = "SELECT * FROM Products WHERE id=@id";
                     using (SqlCommand command = new SqlCommand(sql, connection))
                     {
                         command.Parameters.AddWithValue("@id", id);
@@ -69,7 +69,7 @@ namespace bestbrightness.Pages.Products
                 {
                     connection.Open();
                     // create SQL Query
-                    String sql = "Update products " + "SET item=@item, category=@category, price=@price review=@review" + "WHERE id=@id";
+                    String sql = "UPDATE products SET item=@item, category=@category, price=@price, review=@review WHERE id=@id";
 
                     using (SqlCommand command = new SqlCommand(sql, connection))
                     {
