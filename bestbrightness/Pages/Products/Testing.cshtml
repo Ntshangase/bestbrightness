@@ -1,7 +1,23 @@
 ﻿@page
 @model bestbrightness.Pages.Products.TestingModel
 @{
+    ViewData["Title"] = "Product List";
 }
 
 <br>
-<h2>Welcoming Testing 2</h2>
+<h2>@ViewData["Title"]</h2>
+
+<div class="product-grid">
+    @foreach (var product in Model.listProducts)
+    {
+        <div class="product-card">
+            @* <img src="product-images/@product.ImageFileName" alt="@product.Item" /> *@
+            <h3>@product.item</h3>
+            <p>Category: @product.category</p>
+            <p>Price: R @product.price</p>
+            <p>Review: @product.review</p>
+            <p>Created At: @product.created_at</p>
+            <button>Add to Cart</button>
+        </div>
+    }
+</div>
