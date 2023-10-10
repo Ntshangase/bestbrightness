@@ -49,6 +49,19 @@ namespace bestbrightness.Pages.Products
                 Console.WriteLine("Exception: " + ex.ToString());
             }
         }
+        public void IncrementCartCounter()
+        {
+            CartCounter++;
+        }
+
+        public void OnPost(int addItemToCart)
+        {
+            // Increment the cart counter when a product is added to the cart
+            IncrementCartCounter();
+
+            // Redirect back to the same page or to a shopping cart page
+            RedirectToPage("/Products/Testing"); // Adjust the redirection as needed
+        }
 
         // Your ProductInfo class goes here
     }

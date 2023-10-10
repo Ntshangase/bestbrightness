@@ -11,26 +11,17 @@
     @foreach (var product in Model.listProducts)
     {
         <div class="product-card">
-            <img src="./Images/image@(product.id).jpg" alt="@product.item" />
+            <img src="/image@(product.id).jpg" alt="@product.item">
             <h3>@product.item</h3>
             <p>Category: @product.category</p>
             <p>Price: R @product.price</p>
             <p>Review: @product.review</p>
             <p>Created At: @product.created_at</p>
-            <button class="add-to-cart-button" onclick="incrementCartCounter()">Add to Cart</button>
+            <button type="submit" name="addItemToCart" value="@product.id">Add to Cart</button>
+
 
         </div>
     }
 </div>
 
 <div id="cart-counter">You have @Model.CartCounter items on your Cart</div>
-
-<script>
-    function incrementCartCounter() {
-        // Increment the cart counter
-        @Model.CartCounter++;
-
-        // Display the updated cart counter
-        document.getElementById("cart-counter").textContent = @Model.CartCounter;
-    }
-</script>

@@ -18,4 +18,13 @@
     <_ContentIncludedByDefault Remove="Pages\Products\Edit.cshtml" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Include="wwwroot\image1.jpg" />
+    <None Include="wwwroot\image2.jpg" />
+    <None Include="wwwroot\image3.jpg" />
+    <None Include="wwwroot\image4.jpg" />
+    <None Include="wwwroot\image5.jpg" />
+    <None Include="wwwroot\image6.jpg" />
+  </ItemGroup>
+
 </Project>
