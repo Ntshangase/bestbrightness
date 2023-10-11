@@ -17,18 +17,36 @@
             <p>Price: R @product.price</p>
             <p>Review: @product.review</p>
             <p>Created At: @product.created_at</p>
-            <button type="submit" name="addItemToCart" value="@product.id">Add to Cart</button>
-
-
+            <button id="incrementButton" onClick="incrementCounter()">Add to Cart</button>
         </div>
     }
 </div>
 
-<div id="cart-counter">You have @Model.CartCounter items on your Cart</div>
+<div>
+    <h2>You have: <span id="counter">0</span> Items on your cart</h2>
+</div>
+
+
+<script>
+    // Function to increment the counter
+    function incrementCounter() {
+        // Get a reference to the counter element
+        var counterElement = document.getElementById("counter");
+
+        // Get the current counter value
+        var currentCount = parseInt(counterElement.innerText);
+
+        // Increment the counter
+        var newCount = currentCount + 1;
+
+        // Update the counter element
+        counterElement.innerText = newCount;
+    }
+</script>
 
 <style>
     /* Style for the "Add to Cart" button */
-    button[name="addItemToCart"] {
+    #incrementButton {
         background-color: #007bff; /* Background color */
         color: #fff; /* Text color */
         border: none; /* Remove the border */
@@ -38,7 +56,7 @@
     }
 
         /* Style for the button on hover */
-        button[name="addItemToCart"]:hover {
+        #incrementButton:hover {
             background-color: #0056b3; /* Darker background color on hover */
         }
 
